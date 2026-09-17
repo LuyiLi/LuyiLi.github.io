@@ -1,0 +1,117 @@
+{
+  "pgmt": {
+    "name": "PGMT",
+    "type": "misc",
+    "key": "li2026pgmt",
+    "title": "PGMT: Perceptive General Motion Tracking for Humanoid Robots",
+    "fields": {
+      "author": "Li, Hongyi and Li, Peizhuo and Tao, Yucheng and Wang, Ze and Xu, Fangzhou and Chen, Jinyi and Yuan, Yanyan and Jia, Dapeng and Jin, Yongbin and Fan, Mingfeng and Sartoretti, Guillaume and Wang, Hongtao",
+      "year": "2026",
+      "eprint": "2609.08511",
+      "archivePrefix": "arXiv",
+      "primaryClass": "cs.RO",
+      "url": "https://arxiv.org/abs/2609.08511"
+    },
+    "source": "https://luyili.github.io/pgmt/",
+    "sourceLabel": "Project citation"
+  },
+  "taga": {
+    "name": "TAGA",
+    "type": "misc",
+    "key": "li2026taga",
+    "title": "TAGA: Terrain-aware Active Gaze Learning for Generalizable Agile Humanoid Locomotion",
+    "fields": {
+      "author": "Li, Peizhuo and Li, Hongyi and Fan, Mingfeng and Xu, Fangzhou and Liao, Shuhao and Ma, Yuxuan and Zeng, Zicheng and Wang, Ze and Jin, Yongbin and Cao, Yuhong and Wang, Hongtao and Sartoretti, Guillaume",
+      "year": "2026",
+      "eprint": "2606.05880",
+      "archivePrefix": "arXiv",
+      "primaryClass": "cs.RO",
+      "url": "https://arxiv.org/abs/2606.05880"
+    },
+    "source": "https://arxiv.org/abs/2606.05880",
+    "sourceLabel": "arXiv record"
+  },
+  "kivi": {
+    "name": "KiVi",
+    "type": "inproceedings",
+    "key": "li2026kivi",
+    "title": "KiVi: Kinesthetic-Visuospatial Integration for Dynamic and Safe Egocentric Legged Locomotion",
+    "fields": {
+      "author": "Li, Peizhuo and Li, Hongyi and Ma, Yuxuan and Chang, Linnan and Yang, Xinrong and Yu, Ruiqi and Liao, Shuhao and Zhang, Yifeng and Cao, Yuhong and Zhu, Qiuguo and Sartoretti, Guillaume",
+      "booktitle": "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)",
+      "year": "2026",
+      "eprint": "2509.23650",
+      "archivePrefix": "arXiv",
+      "primaryClass": "cs.RO"
+    },
+    "source": "https://marmotlab.github.io/kivi-quadruped/",
+    "sourceLabel": "Project citation"
+  },
+  "sata": {
+    "name": "SATA",
+    "type": "inproceedings",
+    "key": "li2025sata",
+    "title": "SATA: Safe and Adaptive Torque-Based Locomotion Policies Inspired by Animal Learning",
+    "fields": {
+      "author": "Li, Peizhuo and Li, Hongyi and Sun, Ge and Cheng, Jin and Yang, Xinrong and Bellegarda, Guillaume and Shafiee Ashtiani, Milad and Cao, Yuhong and Ijspeert, Auke and Sartoretti, Guillaume Adrien",
+      "booktitle": "Proceedings of Robotics: Science and Systems",
+      "year": "2025",
+      "address": "Los Angeles, CA, USA",
+      "month": "June",
+      "doi": "10.15607/RSS.2025.XXI.124",
+      "url": "https://www.roboticsproceedings.org/rss21/p124.html"
+    },
+    "source": "https://www.roboticsproceedings.org/rss21/p124.html",
+    "sourceLabel": "RSS proceedings"
+  },
+  "swap": {
+    "name": "SWAP",
+    "type": "misc",
+    "key": "lan2026swap",
+    "title": "SWAP: Symmetric Equivariant World-Model for Agile Robot Parkour",
+    "fields": {
+      "author": "Lan, Kaixin and Wang, Ze and Li, Hongyi and Jiang, Lei and Fu, Chaojie and Su, Chengkai and Wong, Choi Lam and Jin, Yongbin and Wang, Hongtao",
+      "year": "2026",
+      "eprint": "2606.19928",
+      "archivePrefix": "arXiv",
+      "primaryClass": "cs.RO",
+      "url": "https://arxiv.org/abs/2606.19928"
+    },
+    "source": "https://arxiv.org/abs/2606.19928",
+    "sourceLabel": "arXiv record"
+  },
+  "start": {
+    "name": "START",
+    "type": "article",
+    "key": "yu2026start",
+    "title": "START: Traversing Sparse Footholds With Terrain Reconstruction",
+    "fields": {
+      "author": "Yu, Ruiqi and Wang, Qianshi and Li, Hongyi and Jun, Zheng and Wang, Zhicheng and Wu, Jun and Zhu, Qiuguo",
+      "journal": "IEEE Robotics and Automation Letters",
+      "year": "2026",
+      "volume": "11",
+      "number": "2",
+      "pages": "2194--2201",
+      "doi": "10.1109/LRA.2025.3645649",
+      "url": "https://doi.org/10.1109/LRA.2025.3645649"
+    },
+    "source": "https://doi.org/10.1109/LRA.2025.3645649",
+    "sourceLabel": "IEEE publication"
+  },
+  "helom": {
+    "name": "HeLoM",
+    "type": "misc",
+    "key": "yang2025helom",
+    "title": "HeLoM: Hierarchical Learning for Whole-Body Loco-Manipulation by a Hexapod Robot",
+    "fields": {
+      "author": "Yang, Xinrong and Li, Peizhuo and Li, Hongyi and Peng, Yifeng and Jain, Arhaan and Lu, Junkai and Chang, Linnan and Cao, Yuhong and Zhang, Yifeng and Sun, Ge and Sartoretti, Guillaume",
+      "year": "2025",
+      "eprint": "2509.23651",
+      "archivePrefix": "arXiv",
+      "primaryClass": "cs.RO",
+      "url": "https://arxiv.org/abs/2509.23651"
+    },
+    "source": "https://arxiv.org/abs/2509.23651",
+    "sourceLabel": "arXiv record"
+  }
+}

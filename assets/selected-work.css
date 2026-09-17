@@ -1,0 +1,103 @@
+#hongyi-research-subtle .hy-work-entry.hy-story-entry {
+  display: block;
+  padding-block: 30px;
+}
+#hongyi-research-subtle .hy-story-disclosure { min-width: 0; }
+#hongyi-research-subtle .hy-story-summary {
+  display: grid;
+  grid-template-columns: 118px minmax(0, 1fr) 184px 16px;
+  align-items: start;
+  gap: 24px;
+  padding: 0;
+  list-style: none;
+  cursor: pointer;
+}
+#hongyi-research-subtle .hy-story-summary::-webkit-details-marker { display: none; }
+#hongyi-research-subtle .hy-story-summary::marker { content: ''; }
+#hongyi-research-subtle .hy-story-entry .hy-story-summary:is(:hover, :focus-visible) { background: transparent; }
+#hongyi-research-subtle .hy-story-summary .hy-work-name {
+  display: block;
+  margin: 0 0 9px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -.035em;
+  color: var(--hy-ink);
+}
+#hongyi-research-subtle .hy-story-summary .hy-work-venue { color: var(--hy-secondary); font-size: 11px; line-height: 1.6; }
+#hongyi-research-subtle .hy-story-copy { min-width: 0; }
+#hongyi-research-subtle .hy-story-copy h3 {
+  margin: 0;
+  color: var(--hy-ink);
+  font-size: 20px;
+  line-height: 1.45;
+  font-weight: 500;
+  letter-spacing: -.025em;
+  transition: color 180ms ease;
+}
+#hongyi-research-subtle .hy-story-copy .hy-work-abstract { margin: 10px 0 0; }
+#hongyi-research-subtle .hy-story-preview { display: block; padding-top: 4px; }
+#hongyi-research-subtle .hy-story-preview img { display: block; width: 100%; height: auto; border: 0; border-radius: var(--hy-radius); }
+#hongyi-research-subtle .hy-story-icon {
+  width: 16px;
+  height: 16px;
+  margin-top: 7px;
+  color: var(--hy-secondary);
+  transition: transform 220ms ease, color 180ms ease;
+}
+#hongyi-research-subtle .hy-story-entry:is(:hover, :has(:focus-visible)) .hy-story-title,
+#hongyi-research-subtle .hy-story-entry:is(:hover, :has(:focus-visible)) .hy-story-icon { color: var(--hy-blue); }
+#hongyi-research-subtle .hy-story-disclosure[data-disclosure-expanded='true'] .hy-story-icon { transform: rotate(45deg); }
+#hongyi-research-subtle .hy-story-entry > .hy-work-actions { margin: 12px 40px 0 142px; }
+#hongyi-research-subtle .hy-story-pipeline { margin: 28px 40px 0 142px; }
+#hongyi-research-subtle .hy-pipeline-image {
+  display: block;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+#hongyi-research-subtle .hy-pipeline-image img { display: block; width: 100%; height: auto; border: 0; }
+#hongyi-research-subtle .hy-story-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 200px;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #080a0c;
+}
+#hongyi-research-subtle .hy-story-video iframe {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+#hongyi-research-subtle .hy-story-pipeline figcaption { margin-top: 16px; color: var(--hy-secondary); font-size: 14px; line-height: 1.8; }
+@media (max-width: 800px) {
+  #hongyi-research-subtle .hy-story-summary { grid-template-columns: 100px minmax(0, 1fr) 144px 14px; gap: 18px; }
+  #hongyi-research-subtle .hy-story-copy h3 { font-size: 18px; }
+  #hongyi-research-subtle .hy-story-entry > .hy-work-actions,
+  #hongyi-research-subtle .hy-story-pipeline { margin-left: 118px; margin-right: 32px; }
+}
+@media (max-width: 620px) {
+  #hongyi-research-subtle .hy-work-entry.hy-story-entry { padding-block: 26px; }
+  #hongyi-research-subtle .hy-story-summary { grid-template-columns: minmax(0, 1fr) 18px; gap: 14px 16px; }
+  #hongyi-research-subtle .hy-story-summary .hy-work-meta { grid-column: 1; grid-row: 1; display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 12px; }
+  #hongyi-research-subtle .hy-story-summary .hy-work-name { margin: 0; font-size: 26px; }
+  #hongyi-research-subtle .hy-story-copy { grid-column: 1 / -1; grid-row: 2; }
+  #hongyi-research-subtle .hy-story-copy h3 { font-size: 20px; }
+  #hongyi-research-subtle .hy-story-preview { grid-column: 1 / -1; grid-row: 3; width: min(260px, 100%); padding-top: 0; }
+  #hongyi-research-subtle .hy-story-icon { grid-column: 2; grid-row: 1; }
+  #hongyi-research-subtle .hy-story-entry > .hy-work-actions { margin: 12px 0 0; }
+  #hongyi-research-subtle .hy-story-pipeline { margin: 24px 0 0; }
+  #hongyi-research-subtle .hy-story-pipeline figcaption { margin-top: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #hongyi-research-subtle .hy-story-icon,
+  #hongyi-research-subtle .hy-story-copy h3 { transition: none; }
+}

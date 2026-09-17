@@ -1,0 +1,39 @@
+/* Full-width chapters receive ambient light; the inset hero stays static. */
+#hongyi-research-subtle {
+  --hy-glow-color: light-dark(rgb(154 183 206 / .4), rgb(122 169 207 / .22));
+}
+#hongyi-research-subtle .hy-chapter-collaborative {
+  --hy-glow-color: light-dark(rgb(154 190 170 / .4), rgb(137 185 159 / .22));
+}
+#hongyi-research-subtle .hy-chapter-background {
+  --hy-glow-color: light-dark(rgb(206 180 139 / .38), rgb(200 166 117 / .2));
+}
+#hongyi-research-subtle .hy-chapter-contact {
+  --hy-glow-color: light-dark(rgb(177 180 213 / .4), rgb(163 168 216 / .22));
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  #hongyi-research-subtle .hy-chapter > .hy-section-atmosphere::after,
+  #hongyi-research-subtle .hy-chapter-header::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 260ms ease;
+    background: radial-gradient(
+      ellipse 500px 360px at var(--hy-glow-x, 50%) var(--hy-glow-y, 50%),
+      var(--hy-glow-color), transparent 74%
+    );
+  }
+  #hongyi-research-subtle .hy-chapter-header::after {
+    z-index: -1;
+    background-position: 0 calc(-1 * var(--hy-glow-header-offset, 0px));
+    background-size: 100% var(--hy-glow-section-height, 100%);
+    background-repeat: no-repeat;
+  }
+  #hongyi-research-subtle .hy-chapter.is-pointer-within > .hy-section-atmosphere::after,
+  #hongyi-research-subtle .is-pointer-within > .hy-chapter-header.is-pinned::after {
+    opacity: 1;
+  }
+}

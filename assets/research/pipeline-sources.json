@@ -1,0 +1,32 @@
+{
+  "pgmt": {
+    "source": "https://arxiv.org/html/2609.08511v2/MotionTracker.png",
+    "file": "assets/research/pgmt-pipeline.png",
+    "width": 1275,
+    "height": 514,
+    "thumbnail": "assets/research/pgmt-overview.webp",
+    "thumbnailWidth": 800,
+    "thumbnailHeight": 361,
+    "bytes": 236341
+  },
+  "taga": {
+    "source": "https://arxiv.org/html/2606.05880v1/Architecture.png",
+    "file": "assets/research/taga-pipeline.png",
+    "width": 1545,
+    "height": 595,
+    "thumbnail": "assets/research/taga-overview.webp",
+    "thumbnailWidth": 800,
+    "thumbnailHeight": 428,
+    "bytes": 384945
+  },
+  "kivi": {
+    "source": "https://arxiv.org/html/2509.23650v3/framework.jpg",
+    "file": "assets/research/kivi-pipeline.jpg",
+    "width": 6753,
+    "height": 2867,
+    "thumbnail": "assets/research/kivi-overview.webp",
+    "thumbnailWidth": 800,
+    "thumbnailHeight": 501,
+    "bytes": 1073834
+  }
+}

@@ -1,0 +1,166 @@
+#hongyi-research-subtle {
+  --hy-selectable-fill: light-dark(rgb(132 165 197 / .12), rgb(137 178 220 / .12));
+  --hy-selectable-edge: light-dark(rgb(96 138 181 / .28), rgb(137 178 220 / .3));
+  --hy-work-wash: light-dark(rgb(115 156 193 / .09), rgb(130 172 212 / .09));
+  --hy-work-spot: light-dark(rgb(114 163 205 / .22), rgb(135 187 234 / .23));
+}
+
+#hongyi-research-subtle .hy-name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 12px 24px;
+}
+#hongyi-research-subtle .hy-name-latin { white-space: nowrap; }
+#hongyi-research-subtle .hy-name-cn {
+  font-family: 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  font-size: clamp(24px, 3vw, 30px);
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: .06em;
+  white-space: nowrap;
+  color: var(--hy-secondary);
+}
+
+/* The complete paper figure keeps its natural proportions and has no frame. */
+#hongyi-research-subtle .hy-work-image {
+  display: block;
+  aspect-ratio: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  border-radius: var(--hy-radius);
+  box-shadow: none;
+}
+#hongyi-research-subtle .hy-work-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: inherit;
+}
+
+/* Decorative layers clip independently so section titles can remain sticky. */
+#hongyi-research-subtle .hy-section-atmosphere {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+}
+#hongyi-research-subtle .hy-section-art {
+  position: absolute;
+  top: 0;
+  right: -4%;
+  width: min(760px, 83%);
+  height: 620px;
+  color: var(--hy-contour);
+  mask-image: radial-gradient(ellipse 66% 65% at 65% 55%, #000 22%, transparent 88%);
+}
+#hongyi-research-subtle .hy-chapter-selected {
+  --hy-chapter-wash: light-dark(rgb(207 225 235 / .38), rgb(54 77 94 / .22));
+}
+#hongyi-research-subtle .hy-chapter-selected .hy-section-art { top: -70px; right: -2%; }
+#hongyi-research-subtle .hy-chapter-collaborative {
+  --hy-contour: light-dark(rgb(94 119 108 / .23), rgb(157 186 172 / .18));
+  --hy-chapter-wash: light-dark(rgb(210 227 218 / .34), rgb(59 81 64 / .22));
+  --hy-work-wash: light-dark(rgb(115 158 131 / .09), rgb(145 189 161 / .09));
+  --hy-work-spot: light-dark(rgb(115 170 140 / .22), rgb(150 205 173 / .23));
+}
+#hongyi-research-subtle .hy-chapter-collaborative .hy-section-art { top: -122px; right: -1%; height: 550px; }
+#hongyi-research-subtle .hy-chapter-background {
+  --hy-contour: light-dark(rgb(135 116 88 / .3), rgb(191 172 143 / .23));
+  --hy-chapter-wash: light-dark(rgb(234 220 198 / .3), rgb(88 71 41 / .2));
+}
+#hongyi-research-subtle .hy-chapter-background .hy-section-art { top: -72px; right: -1%; height: 590px; }
+#hongyi-research-subtle .hy-chapter-contact {
+  --hy-contour: light-dark(rgb(107 113 141 / .22), rgb(163 171 202 / .18));
+  --hy-chapter-wash: light-dark(rgb(222 224 238 / .34), rgb(60 65 95 / .22));
+}
+#hongyi-research-subtle .hy-chapter-contact .hy-section-art { top: -228px; right: 0; height: 560px; }
+#hongyi-research-subtle[data-background='paper'] .hy-section-art,
+#hongyi-research-subtle[data-background='clean'] .hy-section-atmosphere { display: none; }
+
+/* One full-height wash and a cursor light cover each paper, open or closed. */
+#hongyi-research-subtle .hy-work-entry::before {
+  content: '';
+  display: block;
+  position: absolute;
+  inset: 0 -18px;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 12px;
+  background: radial-gradient(360px circle at var(--hy-work-x, 50%) var(--hy-work-y, 50%), var(--hy-work-spot), transparent 80%), var(--hy-work-wash);
+  mask-image: linear-gradient(90deg, transparent, #000 18px, #000 calc(100% - 18px), transparent), linear-gradient(transparent, #000 14px, #000 calc(100% - 14px), transparent);
+  mask-composite: intersect;
+  box-shadow: none;
+  opacity: 0;
+  transform: none;
+  transition: opacity 180ms ease;
+}
+#hongyi-research-subtle .hy-work-entry > * { position: relative; z-index: 1; }
+#hongyi-research-subtle .hy-work-entry:focus-within::before { opacity: 0; transform: none; }
+#hongyi-research-subtle .hy-work-entry:is(:hover, :has(:focus-visible))::before { opacity: 1; transform: none; }
+#hongyi-research-subtle .hy-work-entry::after { display: none; }
+#hongyi-research-subtle .hy-work-entry :is(.hy-story-summary, .hy-collab-summary):is(:hover, :focus-visible) { background: transparent; }
+#hongyi-research-subtle .hy-work-entry:hover .hy-work-name,
+#hongyi-research-subtle .hy-work-entry:hover .hy-work-title,
+#hongyi-research-subtle .hy-work-entry:focus-within .hy-work-title,
+#hongyi-research-subtle .hy-collab-entry:hover > .hy-collab-summary .hy-work-title {
+  color: var(--hy-ink);
+  transform: none;
+}
+#hongyi-research-subtle .hy-work-entry:hover .hy-work-actions a,
+#hongyi-research-subtle .hy-work-entry:hover .hy-work-toggle { color: var(--hy-secondary); }
+
+#hongyi-research-subtle a:not(.hy-primary),
+#hongyi-research-subtle button,
+#hongyi-research-subtle summary {
+  border-radius: 4px;
+  transition: color 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+#hongyi-research-subtle .hy-work-image { border-radius: var(--hy-radius); }
+#hongyi-research-subtle summary { border-radius: 6px; }
+#hongyi-research-subtle :is(a:not(.hy-primary), button, summary):focus-visible {
+  background-color: var(--hy-selectable-fill);
+}
+#hongyi-research-subtle .hy-work-entry a.hy-work-title:focus-visible,
+#hongyi-research-subtle .hy-work-entry .hy-work-actions :is(a, button):focus-visible,
+#hongyi-research-subtle .hy-collab-entry > .hy-collab-summary:focus-visible .hy-work-title {
+  color: var(--hy-blue);
+}
+@media (hover: hover) and (pointer: fine) {
+  #hongyi-research-subtle :is(a:not(.hy-primary), button, summary):hover {
+    background-color: var(--hy-selectable-fill);
+  }
+  #hongyi-research-subtle .hy-work-entry a.hy-work-title:hover,
+  #hongyi-research-subtle .hy-work-entry .hy-work-actions :is(a, button):hover,
+  #hongyi-research-subtle .hy-collab-entry:hover > .hy-collab-summary:hover .hy-work-title {
+    color: var(--hy-blue);
+  }
+  #hongyi-research-subtle .hy-work-entry .hy-work-image:hover {
+    background-color: transparent;
+    box-shadow: 0 0 0 3px var(--hy-selectable-edge);
+  }
+}
+@media (max-width: 620px) {
+  #hongyi-research-subtle .hy-work-entry::before { inset-inline: -10px; }
+  #hongyi-research-subtle .hy-chapter .hy-section-art {
+    top: 0;
+    right: -34%;
+    width: 130%;
+    height: 480px;
+    opacity: .7;
+  }
+  #hongyi-research-subtle .hy-chapter-collaborative .hy-section-art { top: -65px; }
+  #hongyi-research-subtle .hy-chapter-contact .hy-section-art { top: -165px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #hongyi-research-subtle .hy-work-entry::before { transition: none; }
+  #hongyi-research-subtle a,
+  #hongyi-research-subtle button,
+  #hongyi-research-subtle summary { transition: none; }
+}

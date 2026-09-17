@@ -1,0 +1,13 @@
+#hongyi-research-subtle .hy-work-entry { align-content: start; }
+#hongyi-research-subtle [data-disclosure-animating] {
+  overflow: hidden;
+  overflow-anchor: none;
+  will-change: height;
+}
+#hongyi-research-subtle .hy-collab-entry[data-disclosure-expanded='false'] > .hy-collab-summary .hy-collab-icon,
+#hongyi-research-subtle details[data-disclosure-expanded='false'] > summary > svg {
+  transform: rotate(0deg);
+}
+@media (prefers-reduced-motion: reduce) {
+  #hongyi-research-subtle [data-disclosure-animating] { will-change: auto; }
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "key": "pgmt",
+    "name": "PGMT",
+    "venue": "2026 · Preprint",
+    "story": "Flat-ground trackers struggle when the terrain changes. PGMT adapts diverse whole-body motions to stairs and uneven ground, with locomotion, teleoperation, and fall recovery in one policy.",
+    "method": "A pretrained tracking and recovery policy learns to fuse motion intent with selected terrain glimpses, while terrain-aware relaxation allows the motion to adapt to the ground.",
+    "pipelineAlt": "PGMT pipeline: tracking pretraining, perception injection, terrain glimpses, and motion intent fusion for a unified humanoid policy.",
+    "thumbnailAlt": "PGMT humanoid motion tracking across stairs and outdoor terrain.",
+    "links": [
+      {"label": "Paper", "url": "https://arxiv.org/abs/2609.08511"},
+      {"label": "Project", "url": "https://luyili.github.io/pgmt/"},
+      {"label": "GitHub", "url": "https://github.com/LuyiLi/pgmt"}
+    ]
+  },
+  {
+    "key": "taga",
+    "name": "TAGA",
+    "venue": "2026 · Preprint",
+    "story": "Narrow beams, gaps, and sparse footholds leave little room for error. TAGA learns to focus on the terrain that matters next, enabling agile humanoid locomotion with onboard sensing.",
+    "method": "An active gaze module uses vision, proprioception, and motion commands to select terrain patches, which a cross-attention encoder fuses into the locomotion policy.",
+    "pipelineAlt": "TAGA architecture: an active gaze module selects a height-scan patch, a visuomotor encoder applies cross-attention, and an action decoder controls the humanoid.",
+    "thumbnailAlt": "TAGA humanoid traversing gaps, beams, and sparse footholds.",
+    "video": {"youtubeId": "yDrBn-WINDo", "source": "https://marmotlab.github.io/taga-humanoid/"},
+    "links": [
+      {"label": "Paper", "url": "https://arxiv.org/abs/2606.05880"},
+      {"label": "Project", "url": "https://marmotlab.github.io/taga-humanoid/"},
+      {"label": "YouTube", "url": "https://www.youtube.com/watch?v=yDrBn-WINDo"}
+    ]
+  },
+  {
+    "key": "kivi",
+    "name": "KiVi",
+    "venue": "IROS 2026 · Accepted",
+    "story": "Glare and occlusion can undermine visual locomotion. KiVi combines vision with body sensing so a quadruped can navigate uneven terrain and stay stable when visual information degrades.",
+    "method": "A dual-branch estimator keeps proprioception as a stable base and uses memory-enhanced visual attention to add terrain information to the locomotion policy.",
+    "pipelineAlt": "KiVi pipeline: a kinesthetic module estimates body state, a visuospatial module integrates depth images with memory, and both inform the locomotion actor.",
+    "thumbnailAlt": "KiVi quadruped maintaining locomotion across varied terrain and visual disturbances.",
+    "video": {"youtubeId": "AApx3OZqhUQ", "source": "https://marmotlab.github.io/kivi-quadruped/"},
+    "links": [
+      {"label": "Paper", "url": "https://arxiv.org/abs/2509.23650"},
+      {"label": "Project", "url": "https://marmotlab.github.io/kivi-quadruped/"},
+      {"label": "YouTube", "url": "https://www.youtube.com/watch?v=AApx3OZqhUQ"}
+    ]
+  }
+]

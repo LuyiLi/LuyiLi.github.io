@@ -1,0 +1,141 @@
+#hongyi-research-subtle {
+  --hy-region-glow: light-dark(rgb(186 208 229 / .34), rgb(117 159 203 / .15));
+  --hy-region-wash: light-dark(rgb(212 225 238 / .2), rgb(102 135 170 / .055));
+  --hy-section-glow: light-dark(rgb(214 230 242 / .42), rgb(87 123 158 / .13));
+}
+
+/* Let the paper figure define its own proportions, without a matte or frame. */
+#hongyi-research-subtle .hy-work-image {
+  display: block;
+  aspect-ratio: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  border-radius: var(--hy-radius);
+  box-shadow: none;
+}
+#hongyi-research-subtle .hy-work-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: inherit;
+}
+
+/* Clip decoration independently so each section's heading can remain sticky. */
+#hongyi-research-subtle .hy-section-atmosphere {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+}
+#hongyi-research-subtle .hy-section-atmosphere::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(340px circle at var(--hy-section-x, 75%) var(--hy-section-y, 35%), var(--hy-section-glow), transparent 85%);
+  opacity: 0;
+  transition: opacity 260ms ease;
+}
+#hongyi-research-subtle .hy-hero.is-pointer-within .hy-section-atmosphere::after,
+#hongyi-research-subtle .hy-chapter.is-pointer-within .hy-section-atmosphere::after {
+  opacity: 1;
+}
+#hongyi-research-subtle .hy-chapter .hy-terrain-contours {
+  top: 0;
+  right: -5%;
+  width: min(760px, 83%);
+  height: 620px;
+  max-height: 125%;
+  color: var(--hy-contour);
+  transform: rotate(-9deg);
+  transform-origin: center;
+  mask-image: radial-gradient(ellipse 68% 63% at 62% 49%, #000 32%, transparent 90%);
+}
+#hongyi-research-subtle .hy-chapter-selected {
+  --hy-chapter-wash: light-dark(rgb(207 225 235 / .48), rgb(54 77 94 / .25));
+}
+#hongyi-research-subtle .hy-chapter-collaborative {
+  --hy-contour: light-dark(rgb(94 119 108 / .22), rgb(157 186 172 / .18));
+  --hy-chapter-wash: light-dark(rgb(210 227 218 / .46), rgb(59 81 64 / .24));
+  --hy-section-glow: light-dark(rgb(211 231 219 / .48), rgb(97 141 117 / .14));
+}
+#hongyi-research-subtle .hy-chapter-collaborative .hy-terrain-contours {
+  top: -100px;
+  right: 1%;
+  width: min(710px, 82%);
+  height: 550px;
+  max-height: none;
+  transform: rotate(18deg);
+}
+#hongyi-research-subtle .hy-chapter-background {
+  --hy-contour: light-dark(rgb(135 116 88 / .18), rgb(191 172 143 / .17));
+  --hy-chapter-wash: light-dark(rgb(234 220 198 / .42), rgb(88 71 41 / .23));
+  --hy-section-glow: light-dark(rgb(239 225 203 / .46), rgb(157 132 96 / .12));
+}
+#hongyi-research-subtle .hy-chapter-background .hy-terrain-contours {
+  top: -92px;
+  right: -3%;
+  width: min(740px, 88%);
+  height: 590px;
+  max-height: none;
+  transform: scaleX(-1) rotate(-12deg);
+}
+#hongyi-research-subtle .hy-chapter-contact {
+  --hy-contour: light-dark(rgb(107 113 141 / .21), rgb(163 171 202 / .18));
+  --hy-chapter-wash: light-dark(rgb(222 224 238 / .48), rgb(60 65 95 / .24));
+  --hy-section-glow: light-dark(rgb(225 227 243 / .5), rgb(114 120 173 / .14));
+}
+#hongyi-research-subtle .hy-chapter-contact .hy-terrain-contours {
+  top: -245px;
+  right: 0;
+  width: min(770px, 87%);
+  height: 560px;
+  max-height: none;
+  transform: rotate(32deg);
+}
+
+/* One quiet, cursor-following highlight for the content currently being read. */
+#hongyi-research-subtle .hy-hover-region {
+  position: relative;
+  isolation: isolate;
+}
+#hongyi-research-subtle .hy-hover-region::before {
+  content: '';
+  position: absolute;
+  inset: -12px -16px;
+  z-index: -1;
+  border-radius: 10px;
+  pointer-events: none;
+  background: radial-gradient(280px circle at var(--hy-pointer-x, 50%) var(--hy-pointer-y, 50%), var(--hy-region-glow), transparent 88%), var(--hy-region-wash);
+  opacity: 0;
+  transform: none;
+  box-shadow: none;
+  transition: opacity 200ms ease;
+}
+#hongyi-research-subtle .hy-work-entry.hy-hover-region::before { inset: 8px -16px; }
+#hongyi-research-subtle .hy-school.hy-hover-region::before { inset: 4px -12px; }
+#hongyi-research-subtle .hy-hover-region:focus-within::before { opacity: 1; }
+@media (hover: hover) and (pointer: fine) {
+  #hongyi-research-subtle .hy-hover-region:hover::before { opacity: 1; }
+}
+#hongyi-research-subtle[data-background='clean'] .hy-section-atmosphere { display: none; }
+@media (max-width: 620px) {
+  #hongyi-research-subtle .hy-chapter .hy-terrain-contours {
+    top: 0;
+    right: -32%;
+    width: 126%;
+    height: 480px;
+    max-height: none;
+    opacity: .68;
+  }
+  #hongyi-research-subtle .hy-chapter-contact .hy-terrain-contours { top: -180px; }
+  #hongyi-research-subtle .hy-hover-region::before,
+  #hongyi-research-subtle .hy-work-entry.hy-hover-region::before { inset-inline: -10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #hongyi-research-subtle .hy-hover-region::before,
+  #hongyi-research-subtle .hy-section-atmosphere::after { transition: none; }
+}
